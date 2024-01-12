@@ -7,7 +7,7 @@ nav {
     box-shadow: -4px 1px 6px #0000002e;
 }
 
-nav:hover{
+nav:hover {
     box-shadow: -4px 1px 6px #00000099;
 }
 
@@ -31,6 +31,11 @@ nav:hover{
 
 .navbar ul li a:hover {
     border-radius: 10px;
+    color: #dd9b9b;
+    box-shadow: 3px 4px 3px 0 #dd9b9b;
+}
+
+.active {
     color: #dd9b9b;
     box-shadow: 3px 4px 3px 0 #dd9b9b;
 }

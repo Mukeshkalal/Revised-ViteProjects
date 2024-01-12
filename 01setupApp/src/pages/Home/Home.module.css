@@ -1,0 +1,46 @@
+.color {
+    background-color: black;
+    padding: 15px 0;
+    box-sizing: border-box;
+}
+
+.blank {
+    margin: 15px 0 0 0;
+    height: 150px;
+    text-align: center;
+}
+
+.blank button {
+    border-radius: 10px;
+    margin: auto;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(49, 144, 233);
+}
+
+.blank button:hover {
+    box-shadow: inset -3px -2px 10px 0px #303e97e6;
+}
+
+.container {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.container h1 {
+    font-size: 250px;
+    color: aliceblue;
+    font-family: serif;
+}
+
+.container button {
+    height: 70px;
+    width: 70px;
+    border-radius: 100px;
+    margin: auto 10px;
+    font-size: 50px;
+}
