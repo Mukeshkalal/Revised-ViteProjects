@@ -1,9 +1,15 @@
-import { Button, Card, Container, Form } from "react-bootstrap"
+import { Alert, Button, Card, Container, Form } from "react-bootstrap"
 import Layout from "../../../components/Layout"
+import axios from 'axios'
 import { Formik } from 'formik'
 import * as Yup from 'yup'
+import { useState } from "react"
 
 function Register() {
+    const [serverErr, setServerErr] = useState("")
+    const [serverData, setServerData] = useState("")
+
+    setTimeout(()=>{!serverErr, 5000})
 
     const registerSchema = Yup.object({
         name: Yup.string().required().min(3),
@@ -14,7 +20,6 @@ function Register() {
     return (
         <Layout>
             <Container>
-
                 <Card>
                     <Card.Header>
                         Sign Up
@@ -22,9 +27,16 @@ function Register() {
                     <Card.Body>
                         <Formik
                             onSubmit={(values, { resetForm, setSubmitting }) => {
-                                console.log(values);
-                                setSubmitting(false)
-                                resetForm()
+                                axios.post('https://api.darwinstech.com/api/register', values).then(res => {
+                                    setServerData(res.data.msg)
+                                    console.log('dane=====>', res.data.msg)
+                                    setSubmitting(false)
+                                    resetForm()
+                                }).catch((err) => {
+                                    setServerErr(err.response.data.message)
+                                    console.log('error======>', err.response.data.message);
+                                    setSubmitting(false)
+                                })
                             }}
                             initialValues={{
                                 name: '',
@@ -79,12 +91,23 @@ function Register() {
                                                     ""
                                                 )}
                                             </Form.Group>
-                                            <Button type="submit" disabled={isSubmitting}>REGISTER</Button>
+                                            <Button type="submit" disabled={isSubmitting}>{
+                                                isSubmitting ?
+                                                    <>
+                                                        <span className="spinner-border spinner-border-sm me-2 text-danger" aria-hidden="true">
+                                                        </span>
+                                                        <span role="status">Loading...</span>
+                                                    </>
+                                                    : "REGISTER"
+                                            }
+                                            </Button>
                                         </Form>
                                     )
                                 }
                             }
                         </Formik>
+                        {serverErr ? <Alert className="alert alert-danger mt-2">{serverErr}</Alert> : ''}
+                        {serverData ? <Alert className="alert alert-success mt-2">{serverData}</Alert> : ''}
                     </Card.Body>
                 </Card>
             </Container>
