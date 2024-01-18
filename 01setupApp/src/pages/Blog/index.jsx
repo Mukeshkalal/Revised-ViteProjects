@@ -1,8 +1,10 @@
+import Layout from "../../components/Layout"
+
 function Blog() {
     return (
-        <div>
+        <Layout>
             hello Blog world!
-        </div >
+        </Layout>
   )
 }
 

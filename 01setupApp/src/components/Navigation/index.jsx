@@ -10,8 +10,8 @@ function Navigation() {
                     <li><NavLink to="/about">About</NavLink></li>
                     <li><NavLink to="/blog">Blog</NavLink></li>
                     <li><NavLink to="/contact">Contact Me</NavLink></li>
-                    <li><NavLink to="/register">SingUp</NavLink></li>
                     <li><NavLink to="/login">Login</NavLink></li>
+                    <li><NavLink to="/register">SingUp</NavLink></li>
                 </ul>
             </div>
         </nav>

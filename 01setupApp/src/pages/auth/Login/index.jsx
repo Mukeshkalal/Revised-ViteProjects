@@ -1,8 +1,10 @@
+import Layout from "../../../components/Layout"
+
 function Login() {
     return (
-        <div>
+        <Layout>
             hello Login World?
-        </div>
+        </Layout>
     )
 }
 
