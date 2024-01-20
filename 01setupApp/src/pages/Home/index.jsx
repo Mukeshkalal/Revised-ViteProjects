@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import Container from '../../components/Container'
 import Layout from '../../components/Layout'
 import CustomStyle from './Home.module.css'
+import { Container } from 'react-bootstrap'
 function Home() {
     const [count, setCount] = useState(0)
     const [hide, setHide] = useState('hidden')

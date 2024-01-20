@@ -1,20 +1,26 @@
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-import CustomStyle from './navigation.module.css';
+
 function Navigation() {
     return (
-        <nav>
-            <div className="logo">logo</div>
-            <div className={CustomStyle.navbar}>
-                <ul>
-                    <li><NavLink to="/">Home</NavLink></li>
-                    <li><NavLink to="/about">About</NavLink></li>
-                    <li><NavLink to="/blog">Blog</NavLink></li>
-                    <li><NavLink to="/contact">Contact Me</NavLink></li>
-                    <li><NavLink to="/login">Login</NavLink></li>
-                    <li><NavLink to="/register">SingUp</NavLink></li>
-                </ul>
-            </div>
-        </nav>
+        <Navbar expand="lg" bg="dark" data-bs-theme="dark">
+            <Container>
+                <NavLink to="/" className='navbar-brand'>The India</NavLink>
+                <Navbar.Toggle aria-controls="navbarScroll" />
+                <Navbar.Collapse id="navbarScroll">
+                    <Nav
+                        className="ms-auto my-2 my-lg-0"
+                        style={{ maxHeight: '100px' }}
+                        navbarScroll
+                    >
+                        <NavLink to="/" className='nav-link'>Home</NavLink>
+                        <NavLink to="/contact" className='nav-link'>Contact US</NavLink>
+                        <NavLink to="/register" className='nav-link'>Register</NavLink>
+                        <NavLink to="/login" className='nav-link'>Login</NavLink>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
     )
 }
 

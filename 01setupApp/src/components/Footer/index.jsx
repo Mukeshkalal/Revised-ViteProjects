@@ -1,9 +1,11 @@
-import CustomStyle from './Footer.module.css'
+import { Container, Navbar } from 'react-bootstrap'
 function Footer() {
     return (
-        <footer className={CustomStyle}>
-            <p>&copy; powered by MukesH @ 2024</p>
-        </footer>
+        <Navbar expand="lg" bg="dark" className='text-light'>
+            <Container className='justify-content-around'>
+                <p className="pt-4"> &copy; Power By MukesH 2024!</p>
+            </Container>
+        </Navbar>
     )
 }
 

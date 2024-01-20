@@ -5,7 +5,7 @@ function Layout(props) {
   return (
     <>
       <Navigation />
-      <main style={{ minHeight: '77vh', marginTop:'10px' }}>
+      <main style={{ minHeight: '80vh', boxSizing:'border-box' }}>
         {props.children}
       </main>
       <Footer />

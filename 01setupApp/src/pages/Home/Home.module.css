@@ -1,11 +1,10 @@
 .color {
     background-color: black;
-    padding: 15px 0;
-    box-sizing: border-box;
+    padding: 30px 0;
 }
 
 .blank {
-    margin: 15px 0 0 0;
+    padding: 15px 0 0 0;
     height: 150px;
     text-align: center;
 }
