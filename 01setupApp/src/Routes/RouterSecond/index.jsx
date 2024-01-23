@@ -4,6 +4,7 @@ import Contact from "../../pages/Contact"
 import Register from "../../pages/auth/Register"
 import Login from "../../pages/auth/Login"
 import Dashboard from "../../pages/Dashboard"
+import Exams from "../../pages/Exams"
 
 function RouterSecond() {
     const routes = createBrowserRouter([
@@ -30,6 +31,10 @@ function RouterSecond() {
         {
             path: '/dashboard',
             element: <Dashboard />
+        },
+        {
+            path: '/exams',
+            element: <Exams />
         },
     ])
     return (
