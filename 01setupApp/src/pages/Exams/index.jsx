@@ -14,7 +14,7 @@ function Exams() {
         axios.get('https://api.darwinstech.com/api/exams', {
             headers: {
                 Accept: 'application/json',
-                Authorization: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzEyZmYzYTIzYWM4ZDcxY2Q5NWE1YjczMDE5OTkxMmIxZmRlOTM3ZmRlNjJlMTI4YTFhNDVhMzg2YjRkZDIzMzljNmVlZDYxMmY4MWFiYTAiLCJpYXQiOjE3MDYwMTU4MTUuMjUxMDU4LCJuYmYiOjE3MDYwMTU4MTUuMjUxMDYsImV4cCI6MTczNzYzODIxNS4yNDk3ODIsInN1YiI6IjEzNyIsInNjb3BlcyI6W119.IP4XRVxI7CwwavfAK8dh0Gp8_3zW2O_9x2E0Dj_jqbKLNMixGaBN3vHuQPl13GSL6ILw6XqXDrSSiIRMd2qdMnNjVNC0Y4rR3iKfJWQzp0cP6STy7stQf4-avaTK_c1jJd7g-MQO7-kvaLnDaHaQfDhpKE9RY2hwI7ydYRL3206fOANVzC1l5pXcQrwwDT4gy0mMo5bK1kE_7_6eW7r-HUrN9JnMxzyO9jnrGQJG9ke3SmQWswZ6_diWub3wfVEgEQkiQm0w0vztzaeg630sc6n-DWuablj4HTgZXYQpIXXnx0QJDpy_b8Y_CBPkKDr2UgtitI2gtQOKHeKBDfyGc7NZlCnqKDrtcNcD4iBNNUQxRmi24Z6eW2VC6bPhvqmehFGkPRcNPx7DrSBHWWXWiMVRNXyo0InVbPccasa8RWR2g3bLOedYMqXasGAlyG4Trl6yRxykfB3XsQIlYZ1IkUyiq7WF9pt4ixO-EhhWjMzEJplCBvSbJ2w1Pw0Et6r1SdDHM9tq6z-1-CZVOK0FR2TIGE3hNpc7fSJShGPcARhw8Lh5ZSS4A02LHkikYNQN1hryGloLw29zL0BMf438f4dU2USo-oYgVvWQXGJAdtsJVQU_5DYU9S4Xz7U1TTjJn4pbxk408adiYmXefQFNqrsF-u0eUIgKlOyhGdRhu7A'
+                Authorization: 'Bearer ' + localStorage.getItem('token')
             }
         }).then((resp) => {
             setLists(resp.data)
